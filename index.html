@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title>JAO File Tree </title>
+	<link rel="stylesheet" href="jaofiletree.css">
+	<script type="text/javascript" src="jquery-1.8.3.js"></script>
+	<script type="text/javascript" src="jaofiletree.js"></script>
+	<script type="text/javascript">
+            jQuery.noConflict();
+            jQuery(document).ready(function($) {
+                $('#jao').jaofiletree({ 
+                    script  : 'connectors/jaoconnector.php',
+                    onclick : function(elem,type,file){}
+                });
+            });
+	</script>
+  </head>
+  <body>
+	<div id="jao"></div>
+	<a href="#" onclick="console.log(jQuery('#jao').jaofiletree('getCheck'));return false;">GetChecked (See it in debug console)</a><br/>
+	<a href="#" onclick="jQuery('#jao').jaofiletree('open','/');return false;">Open Base</a><br/>
+	<a href="#" onclick="jQuery('#jao').jaofiletree('close','/');return false;">Close base</a><br/>
+  </body>
+</html>
