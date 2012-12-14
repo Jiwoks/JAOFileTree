@@ -15,7 +15,7 @@
   
     var options =  {
       'root'            : '/',
-      'script '         : 'connectors/jaoconnector.php',
+      'script'         : 'connectors/jaoconnector.php',
       'showroot'        : 'root',
       'onclick'         : function(elem,type,file){},
       'oncheck'         : function(elem,checked,type,file){},
