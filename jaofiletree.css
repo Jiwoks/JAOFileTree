@@ -1,4 +1,11 @@
-#jao {
+.jaowrapper {
+        display: block; 
+        float: left;
+        width: 400px; 
+        overflow: hidden;
+}
+
+#jao, #jao2, #jao3 {
 	width: 300px;
 	border: 1px solid #CCC;
 	padding: 10px;
@@ -30,6 +37,10 @@ ul.jaofiletree a {
 
 ul.jaofiletree a:hover {
 	font-weight: bold;
+}
+
+ul.jaofiletree li.selected > a {
+	background: #CED;
 }
 
 /* Core Styles */
