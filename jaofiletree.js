@@ -62,7 +62,7 @@
         getselected : function(){
             var list = new Array();            
             var ik = 0;
-            $this.find('li.selected + a').each(function(){
+            $this.find('li.selected > a').each(function(){
                 list[ik] = {
                     type : $(this).attr('data-type'),
                     file : $(this).attr('data-file')
@@ -141,6 +141,7 @@
             if(options.usecheckboxes && $(this).attr('data-type')=='file'){
                     $this.find('li input[type="checkbox"]').attr('checked',null);
                     $(this).prev(':not(:disabled)').attr('checked','checked');
+                    $(this).prev(':not(:disabled)').trigger('check');
             }
             if(options.canselect){
                 $this.find('li').removeClass('selected');
@@ -151,6 +152,11 @@
         //Bind checkbox check/uncheck
         $this.find('li input[type="checkbox"]').bind('change', function() {
             options.oncheck(this,$(this).is(':checked'), $(this).next().attr('data-type'),$(this).next().attr('data-file'));
+            if($(this).is(':checked')){
+                $this.trigger('check');
+            }else{
+                $this.trigger('uncheck');
+            }
         });
         //Bind for collapse or expand elements
         $this.find('li.directory.collapsed a').bind('click', function() {methods.open($(this).attr('data-file'));return false;});
