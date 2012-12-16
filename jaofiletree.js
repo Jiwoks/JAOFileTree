@@ -6,7 +6,7 @@
 // Dual-licensed under the GNU General Public License and the MIT License
 // Icons from famfamfam silk icon set thanks to http://www.famfamfam.com/lab/icons/silk/
 //
-// Usage : $('#myfiletree').myFileTree(options);
+// Usage : $('#myfiletree').jaofiletree(options);
 //
 // Author: Damien Barrère
 // Website: http://www.crac-design.com
