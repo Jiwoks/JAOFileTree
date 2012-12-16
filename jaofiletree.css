@@ -1,11 +1,4 @@
-.jaowrapper {
-        display: block; 
-        float: left;
-        width: 400px; 
-        overflow: hidden;
-}
-
-#jao, #jao2, #jao3 {
+#jao {
 	width: 300px;
 	border: 1px solid #CCC;
 	padding: 10px;
@@ -108,3 +101,23 @@ ul.jaofiletree li.selected > a {
 .jaofiletree li.ext_xls { background: url(img/xls.png) left top no-repeat; }
 .jaofiletree li.ext_xml { background: url(img/code.png) left top no-repeat; }
 .jaofiletree li.ext_zip { background: url(img/zip.png) left top no-repeat; }
+
+/* Only for exemple */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#wrapper {
+    margin-bottom: 160px;
+}
+
+#debug {
+    width: 100%; 
+    position: fixed; 
+    bottom: 0; 
+    height: 150px;
+    border-top: 1px solid #AAA;
+    background:  #DDD;
+    overflow-y: scroll;
+}

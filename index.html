@@ -17,9 +17,13 @@
 	</script>
   </head>
   <body>
-	<div id="jao"></div>
-	<a href="#" onclick="console.log(jQuery('#jao').jaofiletree('getCheck'));return false;">GetChecked (See it in debug console)</a><br/>
-	<a href="#" onclick="jQuery('#jao').jaofiletree('open','/');return false;">Open Base</a><br/>
-	<a href="#" onclick="jQuery('#jao').jaofiletree('close','/');return false;">Close base</a><br/>
+      <div id="wrapper">
+        <div id="jao"></div>
+        <a href="#" onclick="jQuery(jQuery('#jao').jaofiletree('getchecked')).each(function(){jQuery('#debug').prepend(this.type+' : '+this.file+'<br/>');});return false;">Get checked</a>&nbsp;
+	<a href="#" onclick="jQuery(jQuery('#jao').jaofiletree('getselected')).each(function(){jQuery('#debug').prepend(this.type+' : '+this.file+'<br/>');});return false;">Get selected</a>&nbsp;
+	<a href="#" onclick="jQuery('#jao').jaofiletree('open','/');return false;">Open Base</a>&nbsp;
+	<a href="#" onclick="jQuery('#jao').jaofiletree('close','/');return false;">Close base</a>&nbsp;
+      </div>
+        <div id="debug"></div>
   </body>
 </html>
