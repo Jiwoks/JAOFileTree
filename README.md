@@ -8,4 +8,5 @@ Just another jQuery file tree plugin
 
 ## Licence
 [http://www.gnu.org/licenses/gpl.html](http://www.gnu.org/licenses/gpl.html)
+
 [http://opensource.org/licenses/MIT](http://opensource.org/licenses/MIT)
