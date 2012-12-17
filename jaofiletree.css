@@ -106,10 +106,45 @@ ul.jaofiletree li.selected > a {
 body {
     margin: 0;
     padding: 0;
+    font-family: 'Archivo Narrow', helvetica, sans-serif;
+    color: #333;    
+}
+
+h1 {
+    font-family: 'Archivo Black', helvetica, sans-serif;
+    color: #35373D;
+    border-top: 3px dashed   #35373D;
+    border-bottom: 3px dashed #35373D;
+    width: 400px;
+    margin: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #485590;
+}
+
+a:hover {
+    text-decoration: underline;    
 }
 
 #wrapper {
+    margin: 10px;
     margin-bottom: 160px;
+    float: left;
+    width: 400px;
+}
+
+#content {
+    border-left: 3px dashed #35373D;
+    float: left;
+    padding-left: 30px;
+    margin: 10px 20px 160px 60px;
+    min-height: 400px;
+}
+
+#jao {
+    margin-left: 10px;
 }
 
 #debug {
@@ -118,6 +153,23 @@ body {
     bottom: 0; 
     height: 150px;
     border-top: 1px solid #AAA;
+    background: #FFF;
+}
+
+#debug a {
+    float: right;
+    margin-right: 2em;
+}
+
+#debug h2 {
+    font-size: 0.85em;
+    padding: 0.2em 0 0.2em 2em;
+    margin: 0;
+}
+
+#debugcontent {
+    border-top: 1px solid #AAA;
     background:  #DDD;
-    overflow-y: scroll;
+    overflow-y: scroll;    
+    height: 100%;
 }

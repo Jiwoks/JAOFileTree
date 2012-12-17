@@ -13,17 +13,44 @@
                     script  : 'connectors/jaoconnector.php',
                     onclick : function(elem,type,file){}
                 });
+                $('#jao').bind('afteropen',function(){jQuery('#debugcontent').prepend('A folder has been opened<br/>');});
+                $('#jao').bind('afterclose',function(){jQuery('#debugcontent').prepend('A folder has been closed<br/>');});
             });
 	</script>
+        <link href='http://fonts.googleapis.com/css?family=Archivo+Black' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Archivo+Narrow' rel='stylesheet' type='text/css'>
   </head>
-  <body>
+  <body>      
       <div id="wrapper">
+        <h1>JAO File Tree</h1>
         <div id="jao"></div>
-        <a href="#" onclick="jQuery(jQuery('#jao').jaofiletree('getchecked')).each(function(){jQuery('#debug').prepend(this.type+' : '+this.file+'<br/>');});return false;">Get checked</a>&nbsp;
-	<a href="#" onclick="jQuery(jQuery('#jao').jaofiletree('getselected')).each(function(){jQuery('#debug').prepend(this.type+' : '+this.file+'<br/>');});return false;">Get selected</a>&nbsp;
+        <h2>Actions</h2>
+        <a href="#" onclick="jQuery(jQuery('#jao').jaofiletree('getchecked')).each(function(){jQuery('#debugcontent').prepend(this.type+' : '+this.file+'<br/>');});return false;">Get checked</a>&nbsp;
+	<a href="#" onclick="jQuery(jQuery('#jao').jaofiletree('getselected')).each(function(){jQuery('#debugcontent').prepend(this.type+' : '+this.file+'<br/>');});return false;">Get selected</a>&nbsp;
 	<a href="#" onclick="jQuery('#jao').jaofiletree('open','/');return false;">Open Base</a>&nbsp;
 	<a href="#" onclick="jQuery('#jao').jaofiletree('close','/');return false;">Close base</a>&nbsp;
       </div>
-        <div id="debug"></div>
+      <div id="content">
+          <h2>JAOFileTree is a file tree plugin for jquery</h2>
+          <p>
+              It's an opensource project base on this work: <a href="http://www.abeautifulsite.net/blog/2008/03/jquery-file-tree/">abeautifulsite</a><br/>
+
+              Code is on github <a href="https://github.com/Jiwoks/JAOFileTree">Get the code</a><br/>                           
+          </p>
+          <h3>Basic usage</h3>
+          <code>
+              jQuery(document).ready(function($) {<br/>
+              &nbsp;&nbsp;&nbsp;&nbsp;$('#jao').jaofiletree();<br/>
+            });
+          </code>
+          <p>
+          Need more documentation? You will find here it on the project page : <a href="https://github.com/Jiwoks/JAOFileTree/wiki/Documentation">Documentation</a><br/>              
+          </p>
+      </div>
+      <div id="debug">
+          <a href="#" onclick="jQuery('#debugcontent').html('');return false;">Clear</a>
+          <h2>Debug bar</h2>          
+          <div id="debugcontent"></div>
+      </div>
   </body>
 </html>
