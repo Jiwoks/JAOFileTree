@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title>JAO File Tree </title>
+	<link rel="stylesheet" href="jaofiletree.css">
+	<script type="text/javascript" src="jquery-1.8.3.js"></script>
+	<script type="text/javascript" src="jaofiletree.js"></script>
+	<script type="text/javascript">
+            jQuery.noConflict();
+            jQuery(document).ready(function($) {
+                $('#jao').jaofiletree({ 
+                    script  : 'connectors/svn.php',
+                    onclick : function(elem,type,file){}
+                });                
+            });
+	</script>
+        <link href='http://fonts.googleapis.com/css?family=Archivo+Black' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Archivo+Narrow' rel='stylesheet' type='text/css'>
+  </head>
+  <body>      
+      <div id="wrapper">
+        <h1>JAO File Tree</h1>
+        <h2>This is a subversion repository</h2>
+        <div id="jao"></div>        
+      </div>
+      <div id="content">
+          <h2>JAOFileTree SVN Repository exemple</h2>
+          <p>Just call the svn.php connector like this : </p>
+          <code>
+              $(document).ready(function($) {<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;$('#jao').jaofiletree({ <br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;script  : 'connectors/svn.php'<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;});<br/>
+            });
+          </code>
+          <p><a href="index.html">Back</a></p>
+      </div>      
+  </body>
+</html>
