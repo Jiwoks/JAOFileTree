@@ -29,6 +29,9 @@
 
     var methods = {
         init : function( o ) { 
+	    if($(this).length==0){
+                return;
+            }
             $this = $(this);
             $.extend(options,o);
 
